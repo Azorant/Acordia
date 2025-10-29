@@ -1,0 +1,54 @@
+{
+  "name": "acordia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "prepare": "husky",
+    "lint": "eslint src",
+    "format": "prettier --write src",
+    "test": "pnpm build && node test/test.ts"
+  },
+  "keywords": [],
+  "author": "Azorant <azorant@eris.gg>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Azorant/Acordia.git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.2",
+    "@eslint/js": "^9.38.0",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^24.9.2",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.15.11",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "luxon": "^3.7.2",
+    "stacktrace-js": "^2.0.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  }
+}

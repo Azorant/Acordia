@@ -1,13 +1,4 @@
-# Acordia
-
-A simple logger
-
-`npm i acordia`
-
-![](.github/screenshot.png)
-
-```typescript
-import { Logger, LoggerLevel } from 'acordia';
+import { Logger, LoggerLevel } from '../dist/index.js';
 
 const logger = Logger.createInstance('test');
 logger.level = LoggerLevel.Debug;
@@ -26,4 +17,3 @@ function someFunction() {
 }
 
 someFunction();
-```
