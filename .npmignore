@@ -10,3 +10,4 @@ tsconfig.json
 tsdown.config.ts
 src
 *.tgz
+.github
