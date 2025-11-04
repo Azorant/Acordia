@@ -1,7 +1,6 @@
 import { Logger, LoggerLevel } from '../dist/index.js';
 
-const logger = Logger.createInstance('test');
-logger.level = LoggerLevel.Debug;
+const logger = Logger.createInstance('test').setLevel(LoggerLevel.Debug);
 
 logger.debug('Some debug message with an object', { userId: '...' });
 logger.notice('Some notice message');

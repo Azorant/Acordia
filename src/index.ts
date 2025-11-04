@@ -92,6 +92,52 @@ export class Logger {
     return new Logger(name);
   }
 
+  setLogPath(path: string) {
+    this.logPath = path;
+    return this;
+  }
+
+  setWrite(write: boolean) {
+    this.writeFile = write;
+    return this;
+  }
+
+  setLevel(level: LoggerLevel) {
+    this.level = level;
+    return this;
+  }
+
+  /**
+   * Any token supported by [luxon](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) can be used
+   *
+   * @param {string} format
+   * @memberof Logger
+   */
+  setTimeFormat(format: string) {
+    this.timeFormat = format;
+    return this;
+  }
+
+  /**
+   * Current supported tokens are
+   * - {time}
+   * - {level}
+   * - {name}
+   * - {content}
+   * - {fileName}
+   * - {lineNumber}
+   * - {functionName}
+   * - {columnNumber}
+   *
+   * @param {string} format
+   * @return {*}
+   * @memberof Logger
+   */
+  setLogFormat(format: string) {
+    this.logFormat = format;
+    return this;
+  }
+
   /**
    * Log a debug message
    *
