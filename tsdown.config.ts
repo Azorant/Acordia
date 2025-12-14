@@ -7,5 +7,5 @@ export default defineConfig({
   clean: true,
   unbundle: true,
   attw: true,
-  exports: true,
+  exports: false,
 });
